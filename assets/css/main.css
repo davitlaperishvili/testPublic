@@ -28,6 +28,41 @@ body{
     margin: 0 auto;
 }
 
+.section_title{
+    margin-bottom: 10px;
+    color: var(--buttonBlue);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--fontMain);
+}
+.section_title.center{
+    text-align: center;
+}
+.block_title{
+    margin-bottom: 20px;
+    color: #121212;
+    font-size: 45px;
+    font-weight: 500;
+    font-family: var(--fontMain);
+}
+.block_title.center{
+    text-align: center;
+}
+
+.section_text{
+    margin-bottom: 15px;
+    color: #333333;
+    font-size: 18px;
+    line-height: 150%;
+}
+.section_text p {
+    margin-bottom: 25px;
+}
+.section_text p:last-child{
+    margin-bottom: 0;
+}
+
+
 .theme_button a{
     display: inline-flex;
     align-items: center;
@@ -94,6 +129,7 @@ section.hero{
     height: 100vh;
     display: flex;
     align-items: center;
+    margin-bottom: 150px;
 }
 section.hero figure{
     position: absolute;
@@ -136,4 +172,32 @@ section.hero .container .page_title{
 section.hero .container .page_subtitle{
     margin-bottom: 24px;
     font-size: 24px;
+}
+
+/* ABOUT US SECTION */
+section.about_us{
+    margin-bottom: 250px;
+}
+section.about_us .container{
+    display: flex;
+    align-items: center;
+}
+section.about_us .about_left{
+    margin-right: 145px;
+}
+section.about_us .about_left figure img.about_big{
+    display: block;
+    max-width: 577px;
+    max-height: 425px;
+    padding: 10px;
+    border: 1px solid #E3DEC1;
+    border-top: none;
+}
+section.about_us .about_left figure img.about_small{
+    position: absolute;
+    bottom: -130px;
+    right: -100px;
+    max-width: 386px;
+    max-height: 263px;
+    z-index: 2;
 }
