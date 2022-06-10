@@ -72,6 +72,26 @@ body{
     color: var(--whiteColor);
     font-size: 16px;
 }
+.theme_button a:hover {
+    transition: all .4s ease;
+    background-color: red;
+}
+
+/* General Elements Responsive */
+@media( max-width: 1024px ){
+
+    .section_title{
+        font-size: 16px;
+    }
+    .block_title{
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .section_text{
+        font-size: 16px;
+    }
+
+}
 
 
 /* Header CSS */
@@ -174,6 +194,38 @@ section.hero .container .page_subtitle{
     font-size: 24px;
 }
 
+/* Header And Hero Section Responsive */
+
+@media( max-width: 1024px ){
+    .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+    header .container{
+        flex-direction: column;
+    }
+    header .container .header_right_content{
+        display: none;
+        flex-direction: column;
+    }
+    header .header_right_content nav ul{
+        flex-direction: column;
+    }
+    section.hero{
+        height: 500px;
+        margin-bottom: 50px;
+    }
+    section.hero .hero_wrap h1.page_title{
+        font-size: 20px;
+    }
+    section.hero .hero_wrap .page_subtitle{
+        font-size: 16px;
+    }
+    section.hero figure img{
+        object-fit: cover;
+    }
+}
+
 /* ABOUT US SECTION */
 section.about_us{
     margin-bottom: 250px;
@@ -200,4 +252,97 @@ section.about_us .about_left figure img.about_small{
     max-width: 386px;
     max-height: 263px;
     z-index: 2;
+}
+/* About Us Section Responsive */
+
+@media( max-width: 1024px ){
+    section.about_us{
+        margin-bottom: 50px;
+    }
+    section.about_us .container{
+        flex-direction: column;
+    }
+    section.about_us .about_left{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    section.about_us .about_left figure{
+        display: flex;
+        align-items: center;
+    }
+    section.about_us .about_left figure img.about_big{
+        width: 50%;
+        height: 200px;
+        max-width: 50%;
+        max-height: 200px;
+        object-fit: cover;
+        padding: 0;
+        border: none;
+    }
+    section.about_us .about_left figure img.about_small{
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        height: 200px;
+        max-width: 50%;
+        max-height: 200px;
+        object-fit: cover;
+        z-index: 2;
+    }
+}
+
+/* BENEFITS SECTION */
+
+section.benefits{
+    margin-bottom: 150px;
+}
+section.benefits .benefits_list{
+    display: flex;
+    align-items: center;
+    perspective: 1000px;
+}
+section.benefits .benefits_list .benefit_item{
+    padding: 40px 30px 30px;
+    box-shadow: 0 7px 29px #64646F33;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+section.benefits .benefits_list .benefit_item:last-child{
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+section.benefits .benefits_list .benefit_item:hover{
+    transform: rotateX(30deg);
+}
+.benefit_item img.benefit_icon{
+    margin-bottom: 14px;
+}
+.benefit_item .benefit_title{
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #121212;
+    font-weight: 500;
+    font-family: var(--fontMain);
+}
+.benefit_item .benefit_text{
+    font-size: 16px;
+    color: #333333;
+}
+
+/* Benefits Section Responsive */
+
+@media( max-width: 1024px ) {
+    section.benefits .benefits_list{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    section.benefits .benefits_list .benefit_item{
+        padding: 30px 20px 20px;
+        margin-bottom: 10px;
+        margin-right: 0;
+        width: 100%;
+    }
 }
