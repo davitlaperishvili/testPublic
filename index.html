@@ -24,7 +24,7 @@
                             <a href="#">Home</a>
                         </li>
                         <li>
-                            <a href="#">About</a>
+                            <a href="about_us.html">About</a>
                         </li>
                         <li>
                             <a href="#">Why Us</a>
@@ -104,5 +104,80 @@
             </div>
         </div>
     </section>
+
+    <section class="our_services">
+        <div class="container">
+            <div class="section_title center">Our Services</div>
+            <div class="block_title center">Explore world with us</div>
+            <div class="services_list">
+                <ul>
+                    <li>
+                        <figure>
+                            <img src="assets/images/service1.jpg" alt="">
+                        </figure>
+                        <div class="service_text">
+                            <h3>Roma, Italia</h3>
+                            <div class="service_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minima repellendus debitis molestiae soluta saepe animi velit aspernatur, omnis nulla?</div>
+                            <div class="theme_button">
+                                <a href="#!">Add To Cart</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="assets/images/service2.jpg" alt="">
+                        </figure>
+                        <div class="service_text">
+                            <h3>Jakarta, Indonesia</h3>
+                            <div class="service_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minima repellendus debitis molestiae soluta saepe animi velit aspernatur, omnis nulla?</div>
+                            <div class="theme_button">
+                                <a href="#!">Add To Cart</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="assets/images/service3.jpg" alt="">
+                        </figure>
+                        <div class="service_text">
+                            <h3>Bangkok, Thailand</h3>
+                            <div class="service_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minima repellendus debitis molestiae soluta saepe animi velit aspernatur, omnis nulla?</div>
+                            <div class="theme_button">
+                                <a href="#!">Add To Cart</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Add To Cart
+
+
+        
+
+
+
+const addToCartBtn = document.querySelectorAll(".our_services .services_list .theme_button a");
+
+function addToCart(item) {
+    item.addEventListener("click", function (e) {
+        let target = e.target;
+        e.preventDefault();
+        if (!target.classList.contains("in-cart")) {
+            target.innerHTML = "Alredy In Cart";
+            target.classList.add("in-cart");
+        } else {
+            target.innerHTML = "Add To Cart";
+            target.classList.remove("in-cart");
+        }
+    });
+}
+addToCartBtn.forEach(addToCart);
+    </script>
 </body>
 </html>
+

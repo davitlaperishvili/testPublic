@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Travello</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Travello">
+                <span>Travello</span>
+            </div>
+            <div class="header_right_content">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Why Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Trips</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header_contact_button theme_button">
+                    <a href="tel:999999999">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <h1>About Us</h1>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Add To Cart
+
+
+        
+
+
+
+const addToCartBtn = document.querySelectorAll(".our_services .services_list .theme_button a");
+
+function addToCart(item) {
+    item.addEventListener("click", function (e) {
+        let target = e.target;
+        e.preventDefault();
+        if (!target.classList.contains("in-cart")) {
+            target.innerHTML = "Alredy In Cart";
+            target.classList.add("in-cart");
+        } else {
+            target.innerHTML = "Add To Cart";
+            target.classList.remove("in-cart");
+        }
+    });
+}
+addToCartBtn.forEach(addToCart);
+    </script>
+</body>
+</html>
+
