@@ -16,17 +16,27 @@ benefits.forEach(function (item) {
         }
     });
 });
+const addToCartBtn = document.querySelectorAll(".our_services .services_list .theme_button a");
 
-// const benefits = document.querySelectorAll(".benefits .benefits_list .benefit_item");
-// function benefitsAnim(item) {
-//     item.addEventListener("click", function (e) {
-//         e.stopPropagation();
-//         let target = e.target;
-//         if (target.classList.contains("is-active")) {
-//             target.classList.remove("is-active");
-//         } else {
-//             target.classList.add("is-active");
-//         }
-//     });
-// }
-// benefits.forEach(benefitsAnim);
+function addToCart(item) {
+    item.addEventListener("click", function (e) {
+        let target = e.target;
+        e.preventDefault();
+        if (!target.classList.contains("in-cart")) {
+            target.innerHTML = "Alredy In Cart";
+            target.classList.add("in-cart");
+        } else {
+            target.innerHTML = "Add To Cart";
+            target.classList.remove("in-cart");
+        }
+    });
+}
+addToCartBtn.forEach(addToCart);
+
+const slider = new Swiper(".swiper", {
+    autoplay: {
+        delay: 3000,
+    },
+    slidesPerView: 1,
+    loop: false,
+});

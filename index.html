@@ -7,6 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Travello</title>
 </head>
@@ -152,32 +156,40 @@
         </div>
     </section>
 
+    <section class="front_slider">
+        <div class="front_slider_wrap">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="assets/images/slider1.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="assets/images/about_big.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="assets/images/hero.jpg" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="section_title center">About Us</h2>
+            <div class="block_title center white">Explore world with us</div>
+            <div class="section_text center white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, perferendis consectetur fuga nobis nulla suscipit beatae ut ipsum quidem ratione eligendi ex inventore laudantium et recusandae molestiae expedita omnis labore!</div>
+            <div class="theme_button center">
+                <a href="#">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        // Add To Cart
-
-
-        
-
-
-
-const addToCartBtn = document.querySelectorAll(".our_services .services_list .theme_button a");
-
-function addToCart(item) {
-    item.addEventListener("click", function (e) {
-        let target = e.target;
-        e.preventDefault();
-        if (!target.classList.contains("in-cart")) {
-            target.innerHTML = "Alredy In Cart";
-            target.classList.add("in-cart");
-        } else {
-            target.innerHTML = "Add To Cart";
-            target.classList.remove("in-cart");
-        }
-    });
-}
-addToCartBtn.forEach(addToCart);
-    </script>
 </body>
 </html>
 
