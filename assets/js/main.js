@@ -36,7 +36,20 @@ addToCartBtn.forEach(addToCart);
 const slider = new Swiper(".swiper", {
     autoplay: {
         delay: 3000,
+        disableOnInteraction: false,
     },
+    speed: 2000,
     slidesPerView: 1,
     loop: false,
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+        prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+        },
+        next: {
+            translate: ["100%", 0, 0],
+        },
+    },
 });
